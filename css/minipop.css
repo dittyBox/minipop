@@ -1,32 +1,118 @@
 .parent {
-    position: relative;
-    width: 1000px;
-    height: 900px;
-    border: 1px solid #000;
-    overflow: hidden;
-  }
-  
-  .popup {
-    position: absolute;
-    background: white;
-    border: 1px solid #333;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    width: 180px;
-    height: 120px;
-  }
-  
-  .popup-header {
-    background: #f1f1f1;
-    padding: 5px;
-    cursor: move;
-    user-select: none;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .popup-close {
-    cursor: pointer;
-  }
-  
+  position: relative;
+  width: 1000px;
+  height: 900px;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.popup {
+  position: absolute;
+  background: white;
+  border: 1px solid #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 180px;
+  height: 120px;
+}
+
+.popup-header {
+  background: #f1f1f1;
+  padding: 5px;
+  cursor: move;
+  user-select: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-close {
+  cursor: pointer;
+}
+
+.minipop-scroll {
+  scrollbar-width: thin;
+  /* Firefox: 얇은 스크롤바 */
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+  /* Firefox: thumb, track */
+  border-left: 1px solid #080808;
+  border-right: 1px solid #080808;
+  border-top: 1px solid #080808;
+  box-sizing: border-box;
+  height: 400px;
+  padding: 10px;
+  overflow: auto;
+}
+
+
+/* minipop css */
+.minipop-scroll::-webkit-scrollbar {
+  width: 6px;
+  /* 세로 스크롤바 두께 */
+  height: 6px;
+  /* 가로 스크롤바 두께 */
+}
+
+.minipop-scroll::-webkit-scrollbar-track {
+  background: transparent;
+  /* 트랙 배경 */
+}
+
+.minipop-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* thumb 색상 (살짝 투명) */
+  border-radius: 3px;
+  /* 둥글게 */
+  transition: background-color 0.2s;
+}
+
+.minipop-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* hover 시 조금 진하게 */
+}
+
+/* grid container */
+.minipopGridcontainer {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 1fr;
+  border: 1px solid #080808;
+  box-sizing: border-box;
+}
+
+/* header row */
+.minipopGridcontainer .minipop-header {
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #080808;
+  padding: 4px 2px;
+  background-color: #f5f5f5;
+}
+
+/* data row */
+.minipopGridcontainer .minipop-row {
+  display: contents;
+  /* grid row 그대로 유지 */
+}
+
+.minipopGridcontainer .minipop-row div {
+  padding: 4px 2px;
+  border-bottom: 1px solid #eee;
+}
+
+/* hover 효과 */
+.minipopGridcontainer .minipop-row:hover div {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* checkbox 클릭 영역 확대 */
+.checkbox-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  cursor: pointer;
+}

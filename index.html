@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./css/minipop.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <style>
-
     </style>
     <title>miniPop Test</title>
 </head>
@@ -19,7 +18,7 @@
         button</div>
     <!--minipop-->
     <div
-        style="display: grid; grid-template-rows: 17px 25px 1fr auto; width: 350px; box-sizing: border-box; overflow: hidden;">
+        style="display: grid; grid-template-rows: 17px 27px 1fr 5px; width: 350px; box-sizing: border-box; overflow: hidden;">
         <!--drag bar-->
         <div
             style="border: 1px solid #080808; width: 100%; height: 17px; display: flex; justify-content: end; background-color: #fafafa; box-sizing: border-box;cursor: pointer; ">
@@ -28,24 +27,39 @@
                 <i class="fas fa-times"></i>
             </div>
         </div>
-
         <!--filter area-->
         <div
-        style="display: flex; align-items: center; width: 100%; height: 27px;
+            style="display: flex; align-items: center; width: 100%; height: 27px;
                border-left: 1px solid #080808;border-right: 1px solid #080808; box-sizing: border-box; padding: 0 4px;">
-        <input 
-            type="text" 
-            style="flex: 1; border: none; outline: none; background: transparent; padding: 1px;" 
-            placeholder="검색어 입력..."
-        />
-    </div>
-        <!--content area-->
-        <div style="border-left: 1px solid #080808; border-right: 1px solid #080808; box-sizing: border-box;">
-            <!-- 내용 -->
+            <input type="text"
+                style="flex: 1; border: none; outline: none; background: transparent; padding: 1px;background-color: #f3f3f38a;"
+                placeholder="검색어 입력..." />
         </div>
+        <!--content area-->
+        <div class="minipop-scroll" style="border-left: 1px solid #080808; border-right: 1px solid #080808; border-top: 1px solid #080808; box-sizing: border-box;
+        height: 400px; padding: 10px; overflow: auto;">
 
+            <!-- grid container -->
+            <div class="minipopGridcontainer">
+
+                <!-- header row -->
+                <div class="minipop-header">선택</div>
+                <div class="minipop-header">항목1</div>
+                <div class="minipop-header">항목2</div>
+                <div class="minipop-header">항목3</div>
+
+                <div class="minipop-row">
+                    <div><label class="checkbox-wrapper"><input type="checkbox"></label></div>
+                    <div>데이터1-1</div>
+                    <div>데이터1-2</div>
+                    <div>데이터1-3</div>
+                </div>
+
+                <!-- 필요하면 row 더 추가 가능 -->
+            </div>
+        </div>
         <!--footer area-->
-        <div style="border: 1px solid #080808; height: 17px; box-sizing: border-box;">
+        <div style="border: 1px solid #080808; box-sizing: border-box;background-color: #fafafa; ">
             <!-- footer -->
         </div>
     </div>
