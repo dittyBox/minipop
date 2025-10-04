@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./common/minipop.js"></script>
+    <link rel="stylesheet" href="./css/minipop.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <style>
+
+    </style>
+    <title>miniPop Test</title>
+</head>
+
+<body class="parent" style="padding: 10px;">
+    <div class="button1"
+        style="cursor: pointer; width: 130px; height: 35px; background-color: rgb(200, 192, 245);margin: 17px;">test
+        button</div>
+    <!--minipop-->
+    <div
+        style="display: grid; grid-template-rows: 17px 25px 1fr auto; width: 350px; box-sizing: border-box; overflow: hidden;">
+        <!--drag bar-->
+        <div
+            style="border: 1px solid #080808; width: 100%; height: 17px; display: flex; justify-content: end; background-color: #fafafa; box-sizing: border-box;cursor: pointer; ">
+            <div
+                style="width: 17px; height: 100%; border-left:1px solid #080808; color:#080808; display: flex; align-items: center; justify-content: center; cursor: pointer; box-sizing: border-box;">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <!--filter area-->
+        <div
+        style="display: flex; align-items: center; width: 100%; height: 27px;
+               border-left: 1px solid #080808;border-right: 1px solid #080808; box-sizing: border-box; padding: 0 4px;">
+        <input 
+            type="text" 
+            style="flex: 1; border: none; outline: none; background: transparent; padding: 1px;" 
+            placeholder="검색어 입력..."
+        />
+    </div>
+        <!--content area-->
+        <div style="border-left: 1px solid #080808; border-right: 1px solid #080808; box-sizing: border-box;">
+            <!-- 내용 -->
+        </div>
+
+        <!--footer area-->
+        <div style="border: 1px solid #080808; height: 17px; box-sizing: border-box;">
+            <!-- footer -->
+        </div>
+    </div>
+
+</body>
+<script src="./index.js"></script>
+
+</html>

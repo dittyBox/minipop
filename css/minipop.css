@@ -1,0 +1,32 @@
+.parent {
+    position: relative;
+    width: 1000px;
+    height: 900px;
+    border: 1px solid #000;
+    overflow: hidden;
+  }
+  
+  .popup {
+    position: absolute;
+    background: white;
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 180px;
+    height: 120px;
+  }
+  
+  .popup-header {
+    background: #f1f1f1;
+    padding: 5px;
+    cursor: move;
+    user-select: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .popup-close {
+    cursor: pointer;
+  }
+  
